@@ -1,0 +1,35 @@
+name: Deploy Angular app to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # or master if you use master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        run: ng build --configuration production --base-href "/angular-fullstack-crud/"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/angular-fullstack-crud

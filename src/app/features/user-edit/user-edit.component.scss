@@ -1,0 +1,20 @@
+.page-card {
+  margin: 24px;
+  max-width: 600px;
+}
+
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  gap: 12px;
+}

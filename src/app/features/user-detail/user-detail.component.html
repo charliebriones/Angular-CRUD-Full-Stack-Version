@@ -1,0 +1,29 @@
+<mat-card class="page-card">
+  <mat-card-header>
+    <mat-card-title>User Detail</mat-card-title>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content *ngIf="user$ | async as user">
+    <div class="detail-row">
+      <span class="label">ID</span>
+      <span>{{ user.id }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Name</span>
+      <span>{{ user.name }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Email</span>
+      <span>{{ user.email }}</span>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions align="end" *ngIf="user$ | async as user" class="button-container">
+    <button mat-stroked-button routerLink="/users">Back</button>
+    <button mat-raised-button color="primary" [routerLink]="['/edit', user?.id]">Edit</button>
+  </mat-card-actions>
+</mat-card>

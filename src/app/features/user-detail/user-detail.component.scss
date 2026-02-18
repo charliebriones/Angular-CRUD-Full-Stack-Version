@@ -1,0 +1,21 @@
+.page-card {
+  margin: 24px;
+  max-width: 600px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  font-weight: 500;
+  color: #666;
+}
+
+.button-container {
+  display: flex;
+  gap: 12px;
+}
