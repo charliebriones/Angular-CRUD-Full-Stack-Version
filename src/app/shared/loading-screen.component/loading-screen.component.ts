@@ -11,5 +11,5 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 })
 export class LoadingScreenComponent {
   @Input() message: string =
-    'Our backend API is hosted on Azure Free Tier. The first request may take a few seconds. Please wait...';
+    'Our backend API is hosted on Render Starter Instance. The first request may take a few seconds. Please wait...';
 }

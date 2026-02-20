@@ -28,10 +28,8 @@ export class UserList {
   ngOnInit() {
     // Fetch users and update table
     this.userService.getUsers().subscribe((users) => {
-      console.log('users', users);
       this.loaded.set(true);
       this.dataSource.data = users ?? [];
-      console.log('this.dataSource.data', this.dataSource.data);
     });
   }
 
