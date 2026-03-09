@@ -10,6 +10,5 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   styleUrls: ['./loading-screen.component.scss'],
 })
 export class LoadingScreenComponent {
-  @Input() message: string =
-    'Backend API is hosted on Render Starter Instance. The first request may take a few seconds. Please wait...';
+  @Input() message: string = 'The first request may take a few seconds. Please wait...';
 }
